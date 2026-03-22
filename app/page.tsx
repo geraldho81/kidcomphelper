@@ -296,19 +296,7 @@ export default function Home() {
               <NotePencil size={18} weight="duotone" style={{ color: "var(--coral)" }} />
             </div>
             <span className="text-base font-800 tracking-tight" style={{ color: "var(--ink)" }}>KidComp Helper</span>
-            <span className="hidden sm:inline text-xs font-700 px-2.5 py-1 rounded-full" style={{ background: "var(--coral-bg)", color: "var(--coral)" }}>
-              P5 and P6
-            </span>
           </div>
-          <button
-            onClick={handleSurprise}
-            disabled={loading}
-            className="flex items-center gap-1.5 text-sm font-700 px-3.5 py-2 rounded-xl border-2 transition-all hover:bg-white disabled:opacity-50"
-            style={{ borderColor: "var(--border)", color: "var(--muted)" }}
-          >
-            <Shuffle size={14} weight="bold" />
-            <span className="hidden sm:inline">Surprise me</span>
-          </button>
         </div>
       </header>
 
@@ -517,6 +505,17 @@ export default function Home() {
               <Sparkle size={26} weight="fill" />
               {currentTab.generateLabel}
             </button>
+
+            {/* Surprise me */}
+            <button
+              onClick={handleSurprise}
+              disabled={loading}
+              className="w-full flex items-center justify-center gap-2 py-3.5 rounded-2xl text-base font-700 border-2 transition-all hover:bg-white disabled:opacity-50"
+              style={{ borderColor: "var(--border)", color: "var(--muted)" }}
+            >
+              <Shuffle size={16} weight="bold" />
+              Surprise me with a random topic
+            </button>
           </div>
         </div>
       )}
@@ -582,16 +581,26 @@ export default function Home() {
 
                 {/* Action buttons */}
                 {!loading && (
-                  <div className="flex gap-3 pt-2">
-                    <button onClick={handleGenerate}
-                      className="flex-1 py-4 rounded-2xl text-base font-700 border-2 transition-all hover:bg-white"
-                      style={{ borderColor: "var(--border)", color: "var(--ink)" }}>
-                      Generate again
-                    </button>
-                    <button onClick={() => setScreen("form")}
-                      className="flex-1 py-4 rounded-2xl text-base font-700 text-white"
-                      style={{ background: `linear-gradient(135deg, ${currentTab.color}, ${currentTab.color}CC)` }}>
-                      Change my answers
+                  <div className="space-y-3 pt-2">
+                    <div className="flex gap-3">
+                      <button onClick={handleGenerate}
+                        className="flex-1 py-4 rounded-2xl text-base font-700 border-2 transition-all hover:bg-white"
+                        style={{ borderColor: "var(--border)", color: "var(--ink)" }}>
+                        Generate again
+                      </button>
+                      <button onClick={() => setScreen("form")}
+                        className="flex-1 py-4 rounded-2xl text-base font-700 text-white"
+                        style={{ background: `linear-gradient(135deg, ${currentTab.color}, ${currentTab.color}CC)` }}>
+                        Change my answers
+                      </button>
+                    </div>
+                    <button
+                      onClick={handleSurprise}
+                      className="w-full flex items-center justify-center gap-2 py-3.5 rounded-2xl text-base font-700 border-2 transition-all hover:bg-white"
+                      style={{ borderColor: "var(--border)", color: "var(--muted)" }}
+                    >
+                      <Shuffle size={16} weight="bold" />
+                      Surprise me with a random topic
                     </button>
                   </div>
                 )}
