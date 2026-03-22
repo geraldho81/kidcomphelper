@@ -3,7 +3,7 @@
 import { useState, useCallback } from "react";
 import {
   LightbulbFilament,
-  TextT,
+  NotePencil,
   Star,
   Shuffle,
   Copy,
@@ -293,7 +293,7 @@ export default function Home() {
         <div className="max-w-2xl mx-auto px-5 h-16 flex items-center justify-between">
           <div className="flex items-center gap-2.5">
             <div className="w-8 h-8 rounded-xl flex items-center justify-center" style={{ background: "var(--coral-bg)" }}>
-              <TextT size={16} weight="duotone" style={{ color: "var(--coral)" }} />
+              <NotePencil size={18} weight="duotone" style={{ color: "var(--coral)" }} />
             </div>
             <span className="text-base font-800 tracking-tight" style={{ color: "var(--ink)" }}>KidComp Helper</span>
             <span className="hidden sm:inline text-xs font-700 px-2.5 py-1 rounded-full" style={{ background: "var(--coral-bg)", color: "var(--coral)" }}>
@@ -319,8 +319,8 @@ export default function Home() {
 
             {/* Hero */}
             <div className="text-center mb-10">
-              <div className="inline-flex items-center justify-center w-20 h-20 rounded-3xl mb-5 shadow-lg" style={{ background: "linear-gradient(135deg, var(--coral-bg), #FFE4D8)" }}>
-                <LightbulbFilament size={40} weight="duotone" style={{ color: "var(--coral)" }} />
+              <div className="inline-flex items-center justify-center w-24 h-24 rounded-3xl mb-5 shadow-lg" style={{ background: "linear-gradient(135deg, #FFE8D8, #FFD0B8)" }}>
+                <NotePencil size={52} weight="duotone" style={{ color: "var(--coral)" }} />
               </div>
               <h1 className="text-4xl sm:text-5xl font-800 tracking-tight mb-3" style={{ color: "var(--ink)", lineHeight: 1.15 }}>
                 KidComp Helper
