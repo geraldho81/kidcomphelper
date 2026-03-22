@@ -403,7 +403,7 @@ export default function Home() {
                   hint='Pick a topic from the list. Not sure which one? Choose "Others" at the top and type your own.'
                 >
                   <select value={ideasTheme} onChange={(e) => setIdeasTheme(e.target.value)} className={selectCls} style={selectStyle}>
-                    <option value="Others">Others — type your own topic</option>
+                    <option value="Others">Others: type your own topic</option>
                     {THEMES.map((t) => <option key={t}>{t}</option>)}
                   </select>
                   {ideasTheme === "Others" && (
@@ -422,7 +422,7 @@ export default function Home() {
                 <Question
                   number={2}
                   label="Where does your story happen?"
-                  hint="This is optional. Tap the places that fit your story — or type your own at the bottom."
+                  hint="This is optional. Tap the places that fit your story, or type your own at the bottom."
                 >
                   <div className="flex flex-wrap gap-2 mb-3">
                     {SETTINGS.map((s) => (
@@ -433,7 +433,7 @@ export default function Home() {
                     type="text"
                     value={ideasCustomSetting}
                     onChange={(e) => setIdeasCustomSetting(e.target.value)}
-                    placeholder="Not on the list? Type it here — e.g. Sentosa, a shopping mall, my grandmother's flat..."
+                    placeholder="Not on the list? Type it here. e.g. Sentosa, a shopping mall, my grandmother's flat..."
                     className="w-full border-2 rounded-xl px-4 py-4 text-lg text-zinc-800 bg-white focus:outline-none focus:ring-2 transition-shadow"
                     style={{ borderColor: "var(--border)" }}
                   />
@@ -450,7 +450,7 @@ export default function Home() {
                   hint='Pick a topic from the list. Not sure which one? Choose "Others" at the top and type your own.'
                 >
                   <select value={phrasesTheme} onChange={(e) => setPhrasesTheme(e.target.value)} className={selectCls} style={selectStyle}>
-                    <option value="Others">Others — type your own topic</option>
+                    <option value="Others">Others: type your own topic</option>
                     {THEMES.map((t) => <option key={t}>{t}</option>)}
                   </select>
                   {phrasesTheme === "Others" && (
@@ -508,7 +508,7 @@ export default function Home() {
                   hint='Pick a topic from the list. Not sure which one? Choose "Others" at the top and type your own.'
                 >
                   <select value={endingsTheme} onChange={(e) => setEndingsTheme(e.target.value)} className={selectCls} style={selectStyle}>
-                    <option value="Others">Others — type your own topic</option>
+                    <option value="Others">Others: type your own topic</option>
                     {THEMES.map((t) => <option key={t}>{t}</option>)}
                   </select>
                   {endingsTheme === "Others" && (
@@ -533,7 +533,7 @@ export default function Home() {
                 <Question
                   number={3}
                   label="What happened in your story?"
-                  hint="This is optional — but if you write something, the ending will fit your story better."
+                  hint="This is optional. But if you write something, the ending will fit your story better."
                 >
                   <textarea
                     value={brief}
